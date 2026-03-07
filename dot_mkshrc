@@ -1,0 +1,6 @@
+PS1='${PWD##*/} $ '
+
+alias ls='ls -p'
+
+# Binaries located in toolbx containers.
+alias kew='toolbox run --container ubuntu-toolbox-24.04 kew'
