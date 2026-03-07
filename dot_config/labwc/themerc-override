@@ -1,0 +1,15 @@
+# OSD
+osd.bg.color: #ffffff
+osd.window-switcher.style-classic.item.active.bg.color: #eccfff
+osd.window-switcher.style-classic.item.active.border.color: #000000
+osd.window-switcher.style-classic.item.active.border.width: 0
+osd.window-switcher.style-classic.item.padding.x: 8
+osd.window-switcher.style-classic.item.padding.y: 8
+osd.window-switcher.style-classic.padding: 0
+osd.window-switcher.style-thumbnail.item.active.bg.color: #eccfff
+osd.window-switcher.style-thumbnail.item.active.border.color: #000000
+
+# Window
+window.active.border.color: #000000
+window.inactive.border.color: #ccf4ff
+border.width: 2
