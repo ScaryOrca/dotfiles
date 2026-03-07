@@ -1,0 +1,21 @@
+#[[language]]
+#name = "html"
+#language-server.command = ""
+
+[[language]]
+name = "php"
+file-types = ["php", "theme", "module", "install", "inc"]
+indent = { tab-width = 2, unit = "  " }
+language-servers = [ "intelephense" ]
+
+[language-server.intelephense]
+command = "intelephense"
+config = { "globalStoragePath" = "/Users/matthew/.config/intelephense", "intelephense.environment.includePaths" = ["modules/contrib"], "intelephense.files.associations" = ["*.php", "*.module", "*.inc", "*.theme"] }
+
+[[language]]
+name = "twig"
+scope = "source.twig"
+injection-regex = "twig"
+file-types = ["twig", "njk"]
+roots = []
+indent = { tab-width = 2, unit = "  " }
