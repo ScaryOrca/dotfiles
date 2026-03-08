@@ -1,5 +1,5 @@
 # Set background color.
-swaybg -c '#cccccc' >/dev/null 2>&1 &
+swaybg -c '#a9a9a9' >/dev/null 2>&1 &
 
 # Configure output directives such as mode, position, scale and transform.
 # Use wlr-randr to get your output names
