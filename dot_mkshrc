@@ -6,6 +6,8 @@ else
 	PS1='${PWD##*/} $ '
 fi
 
+PATH=$PATH:~/.local/bin
+
 alias ls='ls -p'
 alias weather='curl wttr.in/?0Tq'
 

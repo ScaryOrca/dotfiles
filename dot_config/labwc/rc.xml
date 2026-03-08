@@ -46,6 +46,10 @@
     <keybind key="W-m">
       <action name="execute" command="~/.scripts/menu.sh" />
     </keybind>
+    <!-- -->
+    <keybind key="W-Semicolon">
+      <action name="execute" command="~/.local/bin/wl-kbptr -o modes=tile,bisect,click" />
+    </keybind>
     <!-- Use a different terminal emulator -->
     <keybind key="W-Return">
       <action name="Execute" command="alacritty" />
