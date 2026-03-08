@@ -1,4 +1,10 @@
-PS1='${PWD##*/} $ '
+# Include container name in prompt if in a container.
+if [ -f /run/.containerenv ]; then
+	container_name=$(sed -n 's/^name="\(.*\)"/\1/p' /run/.containerenv)
+	PS1='[${container_name}] ${PWD##*/} $ '
+else
+	PS1='${PWD##*/} $ '
+fi
 
 alias ls='ls -p'
 
