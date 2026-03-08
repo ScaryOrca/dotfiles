@@ -44,11 +44,7 @@
     </keybind>
     <!-- Open quick menu -->
     <keybind key="W-m">
-      <action name="execute" command="~/.scripts/menu.sh" />
-    </keybind>
-    <!-- -->
-    <keybind key="W-Semicolon">
-      <action name="execute" command="~/.local/bin/wl-kbptr -o modes=tile,bisect,click" />
+      <action name="Execute" command="~/.scripts/menu.sh" />
     </keybind>
     <!-- Use a different terminal emulator -->
     <keybind key="W-Return">
