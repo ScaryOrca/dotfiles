@@ -7,6 +7,7 @@ else
 fi
 
 alias ls='ls -p'
+alias weather='curl wttr.in/?0Tq'
 
 # Binaries located in toolbx containers.
 alias kew='toolbox run --container ubuntu-toolbox-24.04 kew'
