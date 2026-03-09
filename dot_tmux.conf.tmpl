@@ -11,8 +11,13 @@ set-option -ga terminal-overrides ",xterm-256color:Tc"
 set -g base-index 1
 setw -g pane-base-index 1
 set-option -g renumber-windows on
-set -g status-left "#[bg=#000000, fg=#fefffa,bold] #S "
-set -g status-right '#[bg=#000000, fg=#fefffa,bold] #($HOME/.scripts/battery.sh) #[bg=#000000, fg=#fefffa,bold] %I:%M %p '
+set -g status-left "#[bg=#000000, fg=#ffffff,bold] #S "
+
+{{- if eq .chezmoi.hostname "spock" }}
+set -g status-right '#[bg=#000000, fg=#ffffff,bold] #($HOME/.scripts/battery.sh) #[bg=#000000, fg=#ffffff,bold] %I:%M %p '
+{{- else }}
+set -g status-right '#[bg=#000000, fg=#ffffff,bold] %I:%M %p '
+{{- end }}
 set -g window-status-current-style bg="#fefffa",fg="#000000"
 set -g window-status-current-format " #I #W#{?#F,#F,} "
 set -g window-status-format " #I #W#{?#F,#F,} "
