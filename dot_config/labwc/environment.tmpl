@@ -1,9 +1,4 @@
 ##
-## Example ~/.config/labwc/environment file.
-## Uncomment lines starting with one '#' to suit your needs.
-##
-
-##
 ## Use the XKB_DEFAULT_LAYOUT variable to set the keyboard layout. For example
 ## to start with Swedish keyboard layout set it to 'se'. If you are unsure what
 ## your country code is, refer to the layout section of:
@@ -19,9 +14,6 @@
 
 XKB_DEFAULT_LAYOUT=us(dvorak)
 XKB_DEFAULT_OPTIONS=caps:ctrl_modifier
-# XKB_DEFAULT_LAYOUT=se,us(intl)
-# XKB_DEFAULT_OPTIONS=grp:alt_shift_toggle
-# XKB_DEFAULT_OPTIONS=grp:shift_caps_toggle
 
 ##
 ## Set cursor theme and size. Find system icons themes with:
@@ -29,8 +21,11 @@ XKB_DEFAULT_OPTIONS=caps:ctrl_modifier
 ##
 
 XCURSOR_THEME=Adwaita
-# XCURSOR_THEME=capitaine-cursors
+{{- if eq .chezmoi.hostname "spock" }}
+XCURSOR_SIZE=48
+{{- else }}
 XCURSOR_SIZE=36
+{{- end }}
 
 ##
 ## Disable hardware cursors. Most users would not want to do this, but if you
