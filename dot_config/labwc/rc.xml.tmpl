@@ -103,7 +103,11 @@
 
   <libinput>
     <device category="default">
+      {{- if eq .chezmoi.hostname "spock" }}
+      <naturalScroll>yes</naturalScroll>
+      {{- else }}
       <naturalScroll>no</naturalScroll>
+      {{- end }}
     </device>
   </libinput>
 
