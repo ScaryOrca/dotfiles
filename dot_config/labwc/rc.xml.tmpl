@@ -40,7 +40,11 @@
     </keybind>
     <!-- Open launcher -->
     <keybind key="W-Space">
+      {{- if eq .chezmoi.hostname "spock" }}
+      <action name="Execute" command="rofi -show drun -display-drun 'open' -font 'Go Mono 24'" />
+      {{- else }}
       <action name="Execute" command="rofi -show drun -display-drun 'open' -font 'Go Mono 16'" />
+      {{- end }}
     </keybind>
     <!-- Open quick menu -->
     <keybind key="W-m">

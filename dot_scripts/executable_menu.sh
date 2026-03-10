@@ -10,7 +10,12 @@ fi
 
 MENU="$SWAYIDLE_STATUS|Network config|Reboot"
 FONT_NAME="Go Mono"
+
+{{- if eq .chezmoi.hostname "spock" }}
+FONT_SIZE=24
+{{- else }}
 FONT_SIZE=16
+{{- end }}
 
 DIALOG_RESULT=$(echo $MENU | rofi -sep "|" -dmenu -i -p "quick menu" -tokenize -lines 2 -disable-history -font "$FONT_NAME $FONT_SIZE")
 
