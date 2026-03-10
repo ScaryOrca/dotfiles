@@ -10,6 +10,9 @@ swaybg -c '#a9a9a9' >/dev/null 2>&1 &
 #   }
 kanshi >/dev/null 2>&1 &
 
+# Start LXQt PolicyKit Agent.
+/usr/libexec/lxqt-policykit-agent > /dev/null 2>&1 &
+
 # Lock screen after 5 minutes; turn off display after another 5 minutes.
 #
 # Note that in the context of idle system power management, it is *NOT* a good
