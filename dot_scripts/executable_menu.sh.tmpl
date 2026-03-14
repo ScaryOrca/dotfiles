@@ -8,7 +8,7 @@ else
   SWAYIDLE_STATUS="Enable swayidle"
 fi
 
-MENU="$SWAYIDLE_STATUS|Network config|Reboot"
+MENU="$SWAYIDLE_STATUS|Network config|Manage Removable Storage|Reboot"
 FONT_NAME="Go Mono"
 
 {{- if eq .chezmoi.hostname "spock" }}
@@ -32,6 +32,9 @@ elif [ "$DIALOG_RESULT" = "Disable swayidle" ]; then
 
 elif [ "$DIALOG_RESULT" = "Network config" ]; then
   exec alacritty -e nmtui
+
+elif [ "$DIALOG_RESULT" = "Manage Removable Storage" ]; then
+  exec ~/.scripts/drives.sh
 
 elif [ "$DIALOG_RESULT" = "Reboot" ]; then
   exec ~/.scripts/reboot.sh
