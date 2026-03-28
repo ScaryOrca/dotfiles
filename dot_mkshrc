@@ -9,4 +9,4 @@ fi
 PATH=$PATH:~/.local/bin
 
 alias ls='ls -p'
-alias weather='curl wttr.in/?0Tq'
+alias weather='curl wttr.in/?0Tqu'
